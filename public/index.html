@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HotelNet — Network Operations</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="brand"><div class="brand-mark">H<span>N</span></div><div><strong>HotelNet</strong><small>NETWORK OPERATIONS</small></div></div>
+    <div class="side-label">WORKSPACE</div>
+    <nav id="nav">
+      <button class="nav-item active" data-page="overview"><span>◫</span> Overview</button>
+      <button class="nav-item" data-page="topology"><span>⌘</span> Network topology</button>
+      <button class="nav-item" data-page="vlans"><span>▦</span> VLAN management</button>
+      <button class="nav-item" data-page="dhcp"><span>⇄</span> DHCP leases</button>
+      <button class="nav-item" data-page="wireless"><span>◉</span> Wireless clients</button>
+      <button class="nav-item" data-page="testing"><span>⌁</span> Connectivity tests</button>
+    </nav>
+    <div class="sidebar-bottom"><div class="online-dot"></div><div><b>Simulation environment</b><small>Hotel network lab · Local</small></div></div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><div><div class="eyebrow">HOTEL NETWORK / <span id="crumb">OVERVIEW</span></div><h1 id="pageTitle">Network overview</h1></div><div class="top-actions"><span class="live-pill"><i></i> SYSTEM READY</span><div class="avatar">HN</div></div></header>
+    <div id="pageContent" class="content">
+      <section class="welcome"><div><p class="eyebrow">OPERATIONS CENTER</p><h2>Your network, <em>at a glance.</em></h2><p>Monitor departmental segments, client leases and connectivity from one place.</p></div><div class="welcome-icon">⌘</div></section>
+      <section id="stats" class="stats-grid"></section>
+      <section class="main-grid">
+        <div class="panel topology-panel"><div class="panel-head"><div><h3>Network topology</h3><p>Logical view · Department segmentation</p></div><button class="text-btn" data-goto="topology">Explore topology ↗</button></div><div id="miniTopology"></div></div>
+        <div class="panel vlan-panel"><div class="panel-head"><div><h3>VLAN segments</h3><p>Addressing and gateway summary</p></div><button class="icon-btn" data-goto="vlans">↗</button></div><div id="vlanSummary"></div></div>
+      </section>
+      <section class="lower-grid">
+        <div class="panel"><div class="panel-head"><div><h3>Connected devices</h3><p>Registered clients in the simulation</p></div><button class="text-btn" data-goto="dhcp">View all ↗</button></div><div id="devicePreview"></div></div>
+        <div class="panel activity-panel"><div class="panel-head"><div><h3>Recent activity</h3><p>Latest system events</p></div><span class="tiny-tag">LIVE LOG</span></div><div id="activity"></div></div>
+      </section>
+      <footer>HOTELNET <span>•</span> Educational network simulation. No physical network devices are configured.</footer>
+    </div>
+  </main>
+</div>
+<div id="toast" class="toast"></div>
+<script src="/app.js"></script>
+</body></html>
